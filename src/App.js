@@ -1,24 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
+import React from 'react';
+import Slider from './Slider';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome ,faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import 'swiper/css';
+import'./index.css';
+import TulsiPage from './tulsipage';
+import MustardPage from './mustardpage';
+import LavenderPage from './lavenderPage';
+import EchinaceaPage from './echinaceaPage';
+import './Slider.css';
+import ThreeScene from "./360d";
+import DaeLoader from "./3dimage";
+import IframeEmbed from "./3dimagereasdy";
 
 function App() {
   return (
+  <Router>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <nav>
+          <a href="/" className="flex items-center text-white hover:underline">
+           <FontAwesomeIcon icon={faHome} className="mr-3"/>            
+            Home</a>
+          <a href="/" className="text-white hover:underline">About</a>
+          <a href="/" className="text-white hover:underline">Info</a>
+            <form id="search-form">
+              <input
+                type="text"
+                id="search-box"
+                placeholder="Search..."
+                className="px-3 py-2 rounded-l-lg border-none outline-none text-black"
+              />
+              <button
+                type="submit"
+                id="search-button"
+                className="bg-gray-300 rounded-r-lg p-2 flex items-center justify-center hover:bg-gray-400"
+              >
+                <FontAwesomeIcon icon={faMagnifyingGlass} className="text-black" />
+              </button>
+            </form>
+        </nav>
       </header>
-    </div>
+      <main>
+        <div className="slider-section">
+        <Routes>
+           <Route path="/" element={<Slider />} />
+          <Route path="/tulsi-2d-view" element={<TulsiPage />} /> 
+          <Route path="/mustard-2d-view" element={<MustardPage />} />
+          <Route path="/lavender-2d-view" element={<LavenderPage />} /> 
+          <Route path="/echinacea-2d-view" element={<EchinaceaPage />} /> 
+          <Route path="/3d-view" element={<DaeLoader />} /> 
+          <Route path="/360" element={<IframeEmbed />} /> 
+          </Routes>
+          </div>
+          <div className="three-scene-section">
+            <ThreeScene />
+          </div>
+
+        </main>
+      </div>
+      </Router>
   );
 }
 
