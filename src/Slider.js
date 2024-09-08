@@ -13,7 +13,7 @@ const slides = [
     name: "Tulsi",
     description: "Tulsi, or the Holy Basil, is one of the most commonly found 10 medicinal herbs in India in every household. Since ancient times, Tulsi has been used as a winder herb or medicinal plant to cure diseases like high cholesterol, high blood pressure, cough, headache, asthma, indigestion, sinusitis, ulcers, cramps, gastric disorders, etc. Tulsi is also a helpful healing agent to treat diabetes and arthritis.",
     link2D: "/tulsi-2d-view",
-    link3D: "/360-view"
+    link3D: "/tul3d"
   },
   {
     image: "https://r4.wallpaperflare.com/wallpaper/199/859/644/flowers-flower-mustard-plant-wallpaper-16a88eb7793e1532fdf298d31467934e.jpg",
@@ -27,7 +27,7 @@ const slides = [
     name: "Lavender",
     description: "Native to the Mediterranean mountains and North Africa. Lavender requires well-drained soil and bright sun for optimum growth. The essential oil from some lavender flower species contains other medicinal and cosmetic benefits. The antiseptic and anti-inflammatory properties of lavender make it suitable for treating bug bites and burns. The fragrance and soothing quality of lavender make it an ideal agent for curing sleeping disorders, stress, anxiety, depression, etc. People with digestive problems can also try lavender tea to achieve better digestion.",
     link2D: "/lavender-2d-view",
-    link3D: "/3d-view"
+    link3D: "/lav3d"
   },
   {
     image: "https://c0.wallpaperflare.com/path/1017/836/928/echinacea-purperea-sun-hat-flowers-summer-4a2f5b5e2af89c4481f4eecdadcc6151.jpg",

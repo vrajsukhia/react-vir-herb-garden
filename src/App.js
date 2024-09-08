@@ -11,9 +11,18 @@ import LavenderPage from './lavenderPage';
 import EchinaceaPage from './echinaceaPage';
 import './Slider.css';
 import ThreeScene from "./360d";
-import DaeLoader from "./3dimage";
-import IframeEmbed from "./3dimagereasdy";
-
+import  Lav3d from "./lavender3d"
+import Tul3d from './tulsi3d'
+function Home() {
+  return (
+    <>
+      <Slider />
+      <div className="three-scene-section">
+        <ThreeScene />
+      </div>
+    </>
+  );
+} 
 function App() {
   return (
   <Router>
@@ -43,21 +52,17 @@ function App() {
         </nav>
       </header>
       <main>
-        <div className="slider-section">
-        <Routes>
-           <Route path="/" element={<Slider />} />
-          <Route path="/tulsi-2d-view" element={<TulsiPage />} /> 
-          <Route path="/mustard-2d-view" element={<MustardPage />} />
-          <Route path="/lavender-2d-view" element={<LavenderPage />} /> 
-          <Route path="/echinacea-2d-view" element={<EchinaceaPage />} /> 
-          <Route path="/3d-view" element={<DaeLoader />} /> 
-          <Route path="/360" element={<IframeEmbed />} /> 
-          </Routes>
+          <div className="slider-section">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/tulsi-2d-view" element={<TulsiPage />} />
+              <Route path="/mustard-2d-view" element={<MustardPage />} />
+              <Route path="/lavender-2d-view" element={<LavenderPage />} />
+              <Route path="/echinacea-2d-view" element={<EchinaceaPage />} />
+              <Route path="/lav3d" element={<Lav3d/>} />
+              <Route path="/tul3d" element={<Tul3d/>} />
+            </Routes>
           </div>
-          <div className="three-scene-section">
-            <ThreeScene />
-          </div>
-
         </main>
       </div>
       </Router>
