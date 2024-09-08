@@ -1,0 +1,21 @@
+.back-button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 20px;
+    z-index: 1000;
+    transform: translate(50%, -50%);
+}
+
+.back-button:hover {
+    background-color:rgba(26, 119, 232, 0.977);
+    color: white;
+}

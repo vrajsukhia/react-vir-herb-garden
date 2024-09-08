@@ -1,6 +1,9 @@
 .App {
-    padding-top: 100px; /* Adjust this value as needed */
-}
-.view-btn{
-    color: white !important;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding-top: 100px; 
 }
