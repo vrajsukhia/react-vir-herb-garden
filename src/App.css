@@ -1,0 +1,10 @@
+.App {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;;
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding-top: 100px; 
+  overflow-y: auto;
+}
