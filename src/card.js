@@ -3,6 +3,8 @@ import "./card.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import cards from "./db";
+import ReactDOMServer from 'react-dom/server';
+
 const CardModal = ({ isOpen, closeModal, card }) => {
   if (!isOpen) return null;
   return (
@@ -17,18 +19,32 @@ const CardModal = ({ isOpen, closeModal, card }) => {
     </div>
   );
 };
-const Ce = ({ card, onCardClick }) => (
-  <div className="ce" onClick={() => onCardClick(card)}>
-    <img src={card.image} alt={card.title} />
-    <h3>{card.title}</h3>
-  </div>
-);
+const Ce = ({ card, onCardClick }) => {
+  const descriptionString = ReactDOMServer.renderToString(card.description);
+  const lines = descriptionString.split('<br/>');
+
+  return (
+    <div className="ce" onClick={() => onCardClick(card)}>
+      <img src={card.image} alt={card.title} />
+      <h3>{card.title}</h3>
+      <p className="description">
+        {lines.slice(5).map((line, index) => (
+          <span key={index}>
+            {line.includes('<strong>') && (
+              <span dangerouslySetInnerHTML={{ __html: line }} />
+            )}
+          </span>
+        ))}
+      </p>
+    </div>
+  );
+};
 
 const Ap = () => {
   const [selectedCard, setSelectedCard] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [visibleCards, setVisibleCards] = useState(4);
+  const [visibleCards, setVisibleCards] = useState(3);
 
 
   const openModal = (card) => {
@@ -42,17 +58,17 @@ const Ap = () => {
   };
     const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
-    setVisibleCards(4);
+    setVisibleCards(3);
   };
     const filteredCards = cards.filter((card) =>
     card.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
     const handleSeeMore = () => {
-    setVisibleCards((prevVisibleCards) => Math.min(prevVisibleCards + 4, filteredCards.length));
+    setVisibleCards((prevVisibleCards) => Math.min(prevVisibleCards + 3, filteredCards.length));
   };
 
   const handleSeeLess = () => {
-    setVisibleCards((prevVisibleCards) => Math.max(prevVisibleCards - 4, 4));
+    setVisibleCards((prevVisibleCards) => Math.max(prevVisibleCards - 3, 3));
   };
 
 
@@ -73,7 +89,7 @@ const Ap = () => {
         {visibleCards < filteredCards.length && (
           <button className="see-more-button" onClick={handleSeeMore}>See More</button>
         )}
-        {visibleCards > 4 && (
+        {visibleCards > 3 && (
           <button className="see-less-button" onClick={handleSeeLess}>See Less</button>
         )}
       </div>

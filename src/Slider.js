@@ -9,7 +9,7 @@ import './Slider.css'
 
 const slides = [
   {
-    image: "https://r4.wallpaperflare.com/wallpaper/485/657/234/vejyanti-tulsi-wallpaper-d18503f4317d1ebbcc89ce5ce71dc09d.jpg",
+    image: "https://wallpapercave.com/wp/wp8182023.jpg",
     name: "Tulsi",
     description: "Tulsi, or the Holy Basil, is one of the most commonly found 10 medicinal herbs in India in every household. Since ancient times, Tulsi has been used as a winder herb or medicinal plant to cure diseases like high cholesterol, high blood pressure, cough, headache, asthma, indigestion, sinusitis, ulcers, cramps, gastric disorders, etc. Tulsi is also a helpful healing agent to treat diabetes and arthritis.",
     link2D: "/tulsi-2d-view",

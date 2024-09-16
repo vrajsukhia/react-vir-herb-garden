@@ -8,14 +8,14 @@ const SearchComponent = () => {
   const [loading, setLoading] = useState(false);
 
   const handleSearch = async () => {
-    setLoading(true); // Set loading state to true
+    setLoading(true); 
     try {
       const result = await fetchHerbalPlantInfo(query);
-      setResponse(result); // Set the response to display
+      setResponse(result); 
     } catch (error) {
-      setResponse('Error fetching data.'); // Handle error
+      setResponse('Error fetching data.'); 
     } finally {
-      setLoading(false); // Set loading state to false
+      setLoading(false); 
     }
   };
 
