@@ -1,9 +1,6 @@
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 import React from 'react';
 import Slider from './Slider';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import 'swiper/css';
 import'./index.css';
 import TulsiPage from './tulsipage';
 import MustardPage from './mustardpage';
@@ -37,11 +34,13 @@ import Pepmint3d from './pepmint3d';
 import Sp3d from './sp3d';
 import Mus3d from './mus3d';
 import Ap from './card';
+import VideoBackground from './vbg'
 
 
 function Home() {
   return (
     <>
+    <VideoBackground />
       <Slider />
       <div className="three-scene-section">
         <ThreeScene />
@@ -56,15 +55,6 @@ function App() {
   return (
   <Router>
     <div className="App">
-      <header className="App-header">
-        <nav>
-          <a href="/" className="flex items-center text-white hover:underline">
-           <FontAwesomeIcon icon={faHome} className="mr-3"/>            
-            Home</a>
-          <a href="/" className="text-white hover:underline">About</a>
-          <a href="/" className="text-white hover:underline">Info</a>
-        </nav>
-      </header>
       <main>
           <div className="slider-section">
             <Routes>
