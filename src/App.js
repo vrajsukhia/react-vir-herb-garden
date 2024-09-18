@@ -2,6 +2,7 @@ import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 import React from 'react';
 import Slider from './Slider';
 import'./index.css';
+import 'swiper/css';
 import TulsiPage from './tulsipage';
 import MustardPage from './mustardpage';
 import LavenderPage from './lavenderPage';
