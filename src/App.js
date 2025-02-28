@@ -36,11 +36,13 @@ import Sp3d from './sp3d';
 import Mus3d from './mus3d';
 import Ap from './card';
 import VideoBackground from './vbg'
+import SignUpage from './Sign-Up';
 
 
 function Home() {
   return (
     <>
+    
     <VideoBackground />
       <Slider />
       <div className="three-scene-section">
@@ -59,6 +61,7 @@ function App() {
       <main>
           <div className="slider-section">
             <Routes>
+            <Route path='/sign-up' element={<SignUpage/>} />
               <Route path="/" element={<Home />} />
               <Route path="/tulsi-2d-view" element={<TulsiPage />} />
               <Route path="/mustard-2d-view" element={<MustardPage />} />

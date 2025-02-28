@@ -64,6 +64,15 @@ header.header ul.menu li{
     font-family: "Bangers", system-ui;
     cursor: pointer;
 }
+header.header ul.menu a{
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    display: inline-block;
+    color:#fff;
+    font-family: "Bangers", system-ui;
+    cursor: pointer;
+}
 header.header .search{
     font-size: large;
 }

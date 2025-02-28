@@ -46,6 +46,11 @@ const VideoBackground = () => {
           <li className="menu-item">About</li>
           <li className="menu-item">New</li>
           <li className="menu-item">Contacts</li>
+         <a href='/sign-up'>
+          Sign Up
+         </a>
+        
+        
         </ul>
         <div className="search">
           <i className="bx bx-search"></i>
